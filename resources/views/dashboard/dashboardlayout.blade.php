@@ -36,10 +36,10 @@
         <a class="nav-link" href="{{asset(route('view.category'))}}">products</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">new order</a>
+        <a class="nav-link" href="{{asset(route('order.create'))}}">add order</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">orders</a>
+        <a class="nav-link" href="{{asset(route('order.view'))}}">orders</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{asset(route('carousel'))}}">new offer</a>
