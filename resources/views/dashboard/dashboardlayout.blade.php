@@ -51,7 +51,7 @@
         <a class="nav-link" href="#">contacts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">enquiry</a>
+        <a class="nav-link" href="{{asset(route('view.enquiries'))}}">enquiry</a>
       </li>
     </ul>
   </div>

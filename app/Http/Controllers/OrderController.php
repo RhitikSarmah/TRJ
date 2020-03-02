@@ -60,9 +60,11 @@ class OrderController extends Controller
     	return view('order.ordertracking');
     }
     public function checkMyOrder(Request $request){
-    	//
-    }
-     public function viewMyOrder(){
-    	//
+    	$order = Order::where('invoice',$request->invoice)->where('phone',$request->phone)->get();
+    	if(count($order) == 1){
+    		return view('order.view')->with('order',$order);
+    	}else{
+    		return view('order.error');
+    	}
     }
 }

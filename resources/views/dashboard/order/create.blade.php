@@ -13,11 +13,11 @@
 </div>
 <div class="row justify-content-center text-danger">
   <div class="col-md-6">
-  	@if(Session::has('success'))
-  	<div class="alert alert-success">{{Session::get('success')}}</div>
-  	@else
     <form method="POST" action="{{route('order.store')}}" enctype="multipart/form-data">
       @csrf
+      @if(Session::has('success'))
+       <div class="alert alert-success">{{Session::get('success')}}</div>
+      @endif
       <div class="form-group">
         <label for="exampleInputEmail1">Customer Name</label>
         <input type="text" class="form-control" placeholder="Customer Name" name="name">
@@ -65,7 +65,6 @@
       </div>
       <button type="submit" class="btn btn-danger margin">Create Order</button>
     </form>
-    @endif
   </div>
 </div>
 @endsection

@@ -13,6 +13,9 @@
 </div>
 <div class="row justify-content-center text-danger">
   <div class="col-md-6">
+     @if(Session::has('success'))
+      <div class="alert alert-success">{{Session::get('success')}}</div>
+      @else
     <form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
@@ -34,13 +37,16 @@
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
         <input type="text" class="form-control" placeholder="Product Name" name="name">
+        <small>{{$errors->first('name')}}</small>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Image</label>
         <input type="file" class="form-control" placeholder="Product Name" name="image">
+        <small>{{$errors->first('image')}}</small>
       </div>
       <button type="submit" class="btn btn-danger margin">Add Product</button>
     </form>
+    @endif
   </div>
 </div>
 @endsection

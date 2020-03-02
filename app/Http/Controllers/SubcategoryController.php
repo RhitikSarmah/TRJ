@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Subcategory;
 use App\Category;
+use Session;
 
 class SubcategoryController extends Controller
 {
@@ -13,10 +14,18 @@ class SubcategoryController extends Controller
     	return view('dashboard.subcategory.create',compact('categories'));
     }
     public function store(Request $request){
-         Subcategory::create([
+         $request->validate([
+            'name' => 'required'
+         ]);
+         $create = Subcategory::create([
          	'name'=>$request->name,
          	'category_id'=>$request->category_id
-         ]);  
+         ]);
+         if($create){
+            Session::flash('success','new subcategory added');
+         }else{
+            Session::flash('error','error');
+         }
          return redirect()->back();
     }
     public function view($id){

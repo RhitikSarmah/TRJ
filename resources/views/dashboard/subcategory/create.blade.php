@@ -15,6 +15,9 @@
   <div class="col-md-6">
     <form method="POST" action="{{route('sub_category.store')}}">
       @csrf
+      @if(Session::has('success'))
+      <div class="alert alert-success">{{Session::get('success')}}</div>
+      @else
       <div class="form-group">
         <label for="exampleInputEmail1">Select Category</label>
           <select class="form-control" name="category_id">
@@ -26,8 +29,10 @@
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
         <input type="text" class="form-control" placeholder="Subcategory Name" name="name">
+        <small>{{$errors->first('name')}}</small>
       </div>
       <button type="submit" class="btn btn-danger margin">Add Subcategory</button>
+      @endif
     </form>
   </div>
 </div>

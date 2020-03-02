@@ -1,5 +1,16 @@
 @extends('dashboard.dashboardlayout')
 @section('content')
+<style type="text/css">
+  .margin{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+</style>
+<div class="row text-center margin">
+   <div class="col text-danger">
+     <h3>Orders</h3>
+   </div>
+</div>
 <div class="row">
  <div class="container">
 	<table class="table">
@@ -49,7 +60,7 @@
 	       <td>
 	      	<form method="POST" action="{{route('order.delete',$orders->id)}}">
 			@csrf
-				<button type="submit" class="btn btn-danger" onclick="return delFunction()">Delete</button>
+				<button type="submit" class="btn btn-danger" disabled onclick="return delFunction()">Delete</button>
 		    </form>
 	      </td>
 	    </tr>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Subcategory;
 use App\Product;
+use Session;
 
 class ProductController extends Controller
 {
@@ -15,6 +16,10 @@ class ProductController extends Controller
     	return view('dashboard.product.create')->with('categories',$categories)->with('subcategories',$subcategories);
     }
     public function store(Request $request){
+        $request->validate([
+        'name' => 'required|max:232',
+        'image' => 'required|max:200'
+        ]);
         $product = new Product;
     	$product->name = $request->name;
     	$photo = $request->image;
@@ -25,7 +30,12 @@ class ProductController extends Controller
     	$product->image = $url;
     	$product->category_id = $request->category_id;
     	$product->subcategory_id = $request->subcategory_id;
-    	$product->save();
+    	$create = $product->save();
+        if($create){
+            Session::flash('success','new product added');
+        }else{
+            Session::flash('error','error');
+        }
     	return redirect()->back();
     }
     public function view($id){

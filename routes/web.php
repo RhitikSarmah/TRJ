@@ -2,8 +2,9 @@
 
 Route::get('/','CarouselController@indexCarousel')->name('index');
 Route::get('/order-tracking-form','OrderController@orderTrackingForm')->name('order.tracking.form');
-//Route::post('/view-my-order','OrderController@checkMyOrder')->name('check.my.order');
-//Route::get('/view-my-order','OrderController@viewMyOrder')->name('view.my.order');
+Route::post('/view-my-order','OrderController@checkMyOrder')->name('check.my.order');
+Route::get('/enquiry-form','EnquiryController@view')->name('view.enquiry.form');
+Route::post('/enquiry-form','EnquiryController@store')->name('store.enquiry.form');
 
 Route::group(['prefix'=>'dashboard'],function(){
 	Route::get('/',function(){
@@ -17,6 +18,9 @@ Route::group(['prefix'=>'dashboard'],function(){
 	Route::post('/carousel/submit','CarouselController@submitCarousel')->name('carousel.submit');
 	Route::get('/view-offers','CarouselController@viewCarousel')->name('view.carousel');
 	Route::post('/del-carousel/{id}','CarouselController@delCarousel')->name('carousel.delete');
+    Route::get('/enquiries','EnquiryController@viewEnquiries')->name('view.enquiries');
+    Route::post('/del/enquiry/{id}','EnquiryController@delete')->name('enquiry.delete');
+
 });
 Route::group(['prefix'=>'dashboard/product'],function(){
     Route::get('/create','ProductController@create')->name('product.create');
