@@ -17,7 +17,7 @@
       @csrf
       @if(Session::has('success'))
       <div class="alert alert-success">{{Session::get('success')}}</div>
-      @else
+      @endif
       <div class="form-group">
         <label for="exampleInputEmail1">Select Category</label>
           <select class="form-control" name="category_id">
@@ -32,7 +32,6 @@
         <small>{{$errors->first('name')}}</small>
       </div>
       <button type="submit" class="btn btn-danger margin">Add Subcategory</button>
-      @endif
     </form>
   </div>
 </div>

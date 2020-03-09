@@ -48,7 +48,7 @@
         <a class="nav-link" href="{{asset(route('view.carousel'))}}">offers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">contacts</a>
+        <a class="nav-link" href="{{asset(route('feedback.view'))}}">feedback</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{asset(route('view.enquiries'))}}">enquiry</a>
@@ -68,5 +68,10 @@
     if(!confirm("Are You Sure?"))
       event.preventDefault();
   }
+</script>
+<script>
+function goBack() {
+  window.history.back();
+}
 </script>
 </html>

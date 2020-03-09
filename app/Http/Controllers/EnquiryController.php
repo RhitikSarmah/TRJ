@@ -42,4 +42,14 @@ class EnquiryController extends Controller
       $enquiry->delete();
       return redirect()->back();
     }
+    public function search(Request $request){
+      $search = $request->search;
+      if($search != ""){
+        $searchEnquiry = Enquiry::where('name','LIKE','%'.$search.'%')->get();
+        if(count($searchEnquiry) > 0){
+          return view('dashboard.enquiry.viewsearch')->with('searchEnquiry',$searchEnquiry);
+        }
+      }
+      return view('dashboard.error');
+    }
 }

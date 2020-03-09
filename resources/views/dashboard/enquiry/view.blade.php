@@ -5,7 +5,18 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .search{
+  	margin-top: 10px;
+  	margin-right: 20px;
+  }
 </style>
+<div class="row justify-content-end search">
+	<form class="form-inline my-2 my-lg-0" action="{{asset(route('enquiry.search'))}}">
+	@csrf
+	  <input class="form-control form-control-sm" name="search" placeholder="search" type="search">
+	  <button class="btn btn-outline-danger btn-sm my-2 my-sm-0" type="submit">Search</button>
+	</form>
+</div>
 <div class="row text-center margin">
    <div class="col text-danger">
      <h3>Enquiries</h3>

@@ -15,7 +15,7 @@
   <div class="col-md-6">
      @if(Session::has('success'))
       <div class="alert alert-success">{{Session::get('success')}}</div>
-      @else
+      @endif
     <form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
@@ -46,7 +46,6 @@
       </div>
       <button type="submit" class="btn btn-danger margin">Add Product</button>
     </form>
-    @endif
   </div>
 </div>
 @endsection

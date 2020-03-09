@@ -47,4 +47,14 @@ class ProductController extends Controller
     	$products->delete();
     	return redirect()->back();
     }
+    public function search(Request $request){
+      $search = $request->search;
+      if($search != ""){
+        $searchProduct = Product::where('name','LIKE','%'.$search.'%')->get();
+        if(count($searchProduct) > 0){
+          return view('dashboard.product.viewsearch')->with('searchProduct',$searchProduct);
+        }
+      }
+      return view('dashboard.error');
+    }
 }

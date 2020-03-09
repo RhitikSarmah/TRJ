@@ -67,4 +67,14 @@ class OrderController extends Controller
     		return view('order.error');
     	}
     }
+     public function search(Request $request){
+      $search = $request->search;
+      if($search != ""){
+        $searchOrder = Order::where('name','LIKE','%'.$search.'%')->get();
+        if(count($searchOrder) > 0){
+          return view('dashboard.order.viewsearch')->with('searchOrder',$searchOrder);
+        }
+      }
+      return view('dashboard.error');
+    }
 }

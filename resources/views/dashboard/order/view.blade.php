@@ -5,7 +5,18 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .search{
+    margin-top: 10px;
+    margin-right: 20px;
+  }
 </style>
+<div class="row justify-content-end search">
+  <form class="form-inline my-2 my-lg-0" action="{{asset(route('order.search'))}}">
+  @csrf
+    <input class="form-control form-control-sm" name="search" placeholder="search" type="search">
+    <button class="btn btn-outline-danger btn-sm my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
 <div class="row text-center margin">
    <div class="col text-danger">
      <h3>Orders</h3>
@@ -50,8 +61,10 @@
 				    	@csrf
 				    	<select class="form-control form-control-sm" id="exampleFormControlSelect1" name="status" onchange='if(this.value != 0) { this.form.submit(); }'>
 				    	  <option value="0">ORDERED</option>
-					      <option value="SHIPPING">SHIPPING</option>
-					      <option value="OUTFORDELIVERY">OUTFORDELIVERY</option>
+					      <option value="MAKING">MAKING</option>
+					      <option value="DISPATCHED">DISPATCHED</option>
+					      <option value="SHIPMENT">SHIPMENT</option>
+					      <option value="ARRIVED">ARRIVED</option>
 					      <option value="DELIVERED">DELIVERED</option>
 					    </select>
 				    </form>
@@ -60,7 +73,7 @@
 	       <td>
 	      	<form method="POST" action="{{route('order.delete',$orders->id)}}">
 			@csrf
-				<button type="submit" class="btn btn-danger" disabled onclick="return delFunction()">Delete</button>
+				<button type="submit" class="btn btn-danger" onclick="return delFunction()">Delete</button>
 		    </form>
 	      </td>
 	    </tr>

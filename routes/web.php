@@ -5,6 +5,8 @@ Route::get('/order-tracking-form','OrderController@orderTrackingForm')->name('or
 Route::post('/view-my-order','OrderController@checkMyOrder')->name('check.my.order');
 Route::get('/enquiry-form','EnquiryController@view')->name('view.enquiry.form');
 Route::post('/enquiry-form','EnquiryController@store')->name('store.enquiry.form');
+Route::get('/feedback-form','FeedbackController@view')->name('view.feedback.form');
+Route::post('/feedback-form','FeedbackController@store')->name('store.feedback.form');
 
 Route::group(['prefix'=>'dashboard'],function(){
 	Route::get('/',function(){
@@ -20,6 +22,10 @@ Route::group(['prefix'=>'dashboard'],function(){
 	Route::post('/del-carousel/{id}','CarouselController@delCarousel')->name('carousel.delete');
     Route::get('/enquiries','EnquiryController@viewEnquiries')->name('view.enquiries');
     Route::post('/del/enquiry/{id}','EnquiryController@delete')->name('enquiry.delete');
+    Route::get('/enquiry/search','EnquiryController@search')->name('enquiry.search');
+    Route::get('/order/search','OrderController@search')->name('order.search');
+    Route::get('/product/search','ProductController@search')->name('product.search');
+    Route::get('/feedback','FeedbackController@viewDashboard')->name('feedback.view');
 
 });
 Route::group(['prefix'=>'dashboard/product'],function(){
@@ -42,3 +48,6 @@ Route::group(['prefix'=>'dashboard/order'],function(){
     Route::post('/delete/{id}','OrderController@delete')->name('order.delete');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
