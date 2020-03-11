@@ -4,64 +4,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T N J</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
 </head>
 <body>
-        
-<!-- navbar for logo -->
-<!-- <nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#" style="color:#242444; font-weight: 700;">Tansukhrai Ratanlal</a>
-  <div class=" navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" style="color: #cc9933; font-weight: 650;">FB <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#" style="color: #cc9933; font-weight: 650;">INSTA <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#" style="color: #cc9933; font-weight: 650;">YOUTUBE <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
+
+  <!--mobile navbar for products-->
+<div class="container mob-nav-logo p-4">
+  <div class="row justify-content-center">
+        <img class="mob-nav-image" src="{{asset('images/logo.png')}}">
   </div>
-</nav> -->
+</div>
 
   <!-- navbar for products-->
-<div class="container p-5">
-  <div class="row">
-        <h3>TANSUKHRAI RATANLAL</h3> 
+<div class="container nav-logo p-5">
+  <div class="row justify-content-center">
+        <img src="{{asset('images/logo.png')}}" width="60%">
   </div>
 </div>
 
 <!-- navbar for logo 2-->
 <nav class="navbar navbar-expand-lg navbar-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: -100px;">
-    <span>T</span>
+  <button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto" >
       <li class="nav-item">
-        <a class="nav-link" href="#" style="color: #242444; font-size: 22px; padding-right: 40px; padding-left: 20px;">ABOUT</a>
+        <a class="nav-link" href="#">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="color: #242444; font-size: 22px; padding-right: 40px; padding-left: 20px;">COLLECTIONS</a>
+        <a class="nav-link" href="#">COLLECTIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="color: #242444; font-size: 22px; padding-right: 40px; padding-left: 20px;">ORDER</a>
+        <a class="nav-link" href="#">ORDER</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="color: #242444; font-size: 22px; padding-right: 40px; padding-left: 20px;">FEEDBACK</a>
+        <a class="nav-link" href="#">FEEDBACK</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="color: #242444; font-size: 22px; padding-right: 40px; padding-left: 20px;">ENQUIRY</a>
+        <a class="nav-link" href="#">ENQUIRY</a>
       </li>
     </ul>
     <form class="form-inline">
       <div class="search-box">
         <input class="search-text" type="search" name="search">
         <a href="" class="search-btn">
-          ICON
+          <img src="{{asset('images/search.png')}}" width="25px">
         </a>
       </div>
     </form>
@@ -70,42 +61,70 @@
 
 <hr>
 
-<!-- categories -->
-<div style="background-color: #242444;">
-  <div class="container justify-content-center">
-    <div class="row justify-content-center text-center" style="color: #cc9933; justify-content: center;">
-      <div class="col-sm-2" style="margin-top: 50px; margin-bottom: 20px;">
-        <div>lksdh</div>
-        GOLD
+<!-- mobile categories -->
+<div class="mobile-category color-blue">
+  <div class="container-fluid justify-content-center">
+    <div class="row justify-content-center text-center color-blue">
+      <div class="col-2 mob-cat">
+        <a href="{{asset(route('index.view.subcategory', 3))}}"><img src="{{asset('images/gold.png')}}" width="30px"><br>
+        GOLD</a>
       </div>
-      <div class="col-sm-2" style="margin-top: 50px; margin-bottom: 20px;">
-        <div>SJCHSC</div>
-        SILVER
+      <div class="col-2 mob-cat">
+        <a href="{{asset(route('index.view.subcategory', 4))}}"><img src="{{asset('images/silver.png')}}" width="30px"><br>
+        SILVER</a>
       </div>
-      <div class="col-sm-2" style="margin-top: 50px; margin-bottom: 20px;">
-        <div>jsckuuhsc</div>
-        DIAMOND
+      <div class="col-2 mob-cat">
+        <a href="{{asset(route('index.view.subcategory', 6))}}"><img src="{{asset('images/platinum.png')}}" width="30px"><br>
+        PLATINUM</a>
       </div>
-      <div class="col-sm-2" style="margin-top: 50px; margin-bottom: 20px;">
-        <div>lksjckh</div>
-        PLATINUM
+      <div class="col-2 mob-cat">
+        <a href="{{asset(route('index.view.subcategory', 5))}}"><img src="{{asset('images/diamond.png')}}" width="30px"><br>
+        DIAMOND</a>
       </div>
-      <div class="col-sm-2" style="margin-top: 50px; margin-bottom: 20px;">
-        <div>iasjiuhs</div>
-        WATCHES
+      <div class="col-2 mob-cat">
+        <a href="{{asset(route('index.view.subcategory', 7))}}"><img src="{{asset('images/watch.png')}}" width="30px"><br>
+        WATCHES</a>
       </div>
     </div>
-    <div class="text-center" style="color: white; margin-top: 20px; padding-bottom: 50px;">
-       <h3>HOUSE FO LUXURY JEWEL</h3>
+    <div class="text-center mob-category-text">
+       <p>House Of Luxury Jewel</p>
     </div>
   </div>
 </div>
 
-
-
+<!-- categories -->
+<div class="category color-blue">
+  <div class="container justify-content-center">
+    <div class="row justify-content-center text-center color-blue">
+      <div class="col-2 cat">
+        <a href="{{asset(route('index.view.subcategory', 3))}}"><img src="{{asset('images/gold.png')}}" width="70px"><br>
+        GOLD</a>
+      </div>
+      <div class="col-2 cat">
+        <a href="{{asset(route('index.view.subcategory', 4))}}"><img src="{{asset('images/silver.png')}}" width="70px"><br>
+        SILVER</a>
+      </div>
+      <div class="col-2 cat">
+        <a href="{{asset(route('index.view.subcategory', 6))}}"><img src="{{asset('images/platinum.png')}}" width="70px"><br>
+        PLATINUM</a>
+      </div>
+      <div class="col-2 cat">
+        <a href="{{asset(route('index.view.subcategory', 5))}}"><img src="{{asset('images/diamond.png')}}" width="70px"><br>
+        DIAMOND</a>
+      </div>
+      <div class="col-2 cat">
+        <a href="{{asset(route('index.view.subcategory', 7))}}"><img src="{{asset('images/watch.png')}}" width="70px"><br>
+        WATCHES</a>
+      </div>
+    </div>
+    <div class="text-center category-text">
+       <p>House Of Luxury Jewel</p>
+    </div>
+  </div>
+</div>
 
 <!-- dynamic carousel -->
-<div class="section-margin carousel-top">
+<!-- <div class="section-margin carousel-top">
   <div class="carousel-inner">
    @foreach($carousel as $key=>$offer)
     <div class="carousel-item {{$key == 0 ? 'active' : ''}}">
@@ -113,47 +132,88 @@
     </div>
    @endforeach
   </div>
+</div> -->
+<div class="section-margin carousel-top">
+  <div class="carousel-inner">
+      <img src="{{asset('images/offer.png')}}" class="d-block w-100" alt="...">
+  </div>
 </div>
 
+
 <!-- about -->
- <!-- <div class="container div-margin">
-   <div class="row ">
-    <div class="col-md-6">
-       <div class="container">
-              <div class="row text-center">
-                      <h3>TANSUKHRAI RATATNLAL JEWELLERS</h3>  
-              </div>
-              <div class="row about-info">
-                  <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>            
-              </div>
-       </div> 
-    </div>
-    <div class="col-md-6">
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ05V_P2aGYF7Jbf77nuOtv7FtyjsFbTSPGC8W-99BANLDQomFV" class="d-block w-100" alt="...">
-              </div>
-            </div>
-          </div>
-    </div>
+<div class="color-blue">
+  <div class="container">
+  <div class="row about">
+  <div class="col-md-6 about-col">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.
   </div>
-</div> -->
+  <div class="col-md-6">
+    <img src="{{asset('images/about.png')}}" width="100%">
+  </div>
+</div>
+</div>
+</div>
 
+<!-- collage -->
+<div class="section-margin carousel-top">
+  <div class="carousel-inner">
+      <img src="{{asset('images/collage.png')}}" class="d-block w-100" alt="...">
+  </div>
+</div>
 
+<!-- footer -->
+<div class="color-blue footer">
+   <div class="container font-white">
+     <div class="d-inline-block footer-div-up">
+       <h2>CONTACT US</h2><br>
+       <a href="">info@tansukhrairatanlal.com</a>
+       <br> <a href="">Old Post Office, GS Road, Guwahati- 781005 <br> 0361-2343701/02</a>
+       <br><br><a href="">Shopper s Point, 1st Floor, HB Road <br> Fancy Bazaar, Guwahati 781001 <br> 0361-2607069</a>
+       <br><br>
+       <a href="">icon</a>
+       <a href="">icon</a>
+       <a href="">icon</a><br><br>
+     </div>
+     <div class="d-inline-block footer-div-down" style="float: right;"> <br><br><br>
+       <a href="">Disclaimer</a><br>
+       <a href="">Jewellery Care</a><br>
+       <a href="">Terms & Conditions</a><br>
+       <a href="">Track Order</a><br>
+       <a href="">Payment Options</a><br>
+     </div>
+  </div>
+</div>
+
+<!-- footer mobile -->
+<div class="color-blue mob-footer">
+   <div class="container font-white">
+     <div class="mob-footer-div-up">
+       <h2>CONTACT US</h2><br>
+       <a href="">info@tansukhrairatanlal.com</a>
+       <br><br> <a href="">Old Post Office, GS Road, Guwahati- 781005 <br> 0361-2343701/02</a>
+       <br><br><a href="">Shopper s Point, 1st Floor, HB Road <br> Fancy Bazaar, Guwahati 781001 <br> 0361-2607069</a>
+       <br><br>
+       <a href="">icon</a>
+       <a href="">icon</a>
+       <a href="">icon</a>
+     </div>
+     <div class="justify-content-center mob-footer-div-down">
+       <a href="">Disclaimer</a><br>
+       <a href="">Jewellery Care</a><br>
+       <a href="">Terms & Conditions</a><br>
+       <a href="">Track Order</a><br>
+       <a href="">Payment Options</a><br>
+     </div>
+  </div>
+</div>
 
 
 </body>

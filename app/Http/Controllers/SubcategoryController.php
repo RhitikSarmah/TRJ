@@ -18,7 +18,13 @@ class SubcategoryController extends Controller
             'name' => 'required'
          ]);
          $create = Subcategory::create([
-         	'name'=>$request->name,
+            'name'=>$request->name,
+             $photo = $request->file('image'),
+             $name = $photo->getClientOriginalName(),
+             $newname = time().$name,
+             $photo->move('uploads/subcategories',$newname),
+             $url = 'uploads/subcategories/'.$newname,
+             'image' => $url,
          	'category_id'=>$request->category_id
          ]);
          if($create){
@@ -31,6 +37,10 @@ class SubcategoryController extends Controller
     public function view($id){
     	$subcategories = Subcategory::where('category_id',$id)->with('subcategories')->orderBy('name','desc')->get();
     	return view('dashboard.subcategory.view')->with('subcategories',$subcategories);
+    }
+    public function indexView($id){
+        $subcategories = Subcategory::where('category_id',$id)->with('subcategories')->orderBy('name','desc')->get();
+        return view('products.subcategories')->with('subcategories',$subcategories);
     }
     public function delete($id){
         $subcategories = Subcategory::find($id);
