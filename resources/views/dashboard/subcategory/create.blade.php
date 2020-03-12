@@ -34,7 +34,7 @@
       <div class="form-group">
         <label>Image</label>
         <input type="file" class="form-control" name="image">
-        <small>{{$errors->first('name')}}</small>
+        <small>{{$errors->first('image')}}</small>
       </div>
       <button type="submit" class="btn btn-danger margin">Add Subcategory</button>
     </form>

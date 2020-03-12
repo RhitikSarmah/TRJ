@@ -15,7 +15,8 @@ class SubcategoryController extends Controller
     }
     public function store(Request $request){
          $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'image' => 'required|max:200|mimes:png,jpg,jpeg,gif'
          ]);
          $create = Subcategory::create([
             'name'=>$request->name,

@@ -100,11 +100,40 @@ hr{
 }
 .footer{
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+}
+.footer-div-up a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Spartan', sans-serif;
+}
+.footer-div-down a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Spartan', sans-serif;
+}
+.footer-copyright{
+  padding-left: 6%;
+  color: #cc9933;
+  font-family: 'Spartan', sans-serif;
+  font-size: 10px;
+}
+.footer-developer{
+  color: #cc9933;
+  float: right; 
+  display: flex; 
+  padding-right: 6%;
+  font-family: 'Spartan', sans-serif;
+  font-size: 10px;
+  padding-top: 8px;
+}
+.footer-developer a{
+  text-decoration: none;
+  color: #cc9933;
+  font-size: 10px;
 }
 .mob-footer{
   padding-top: 40px;
-  padding-bottom: 40px;
 }
 .mob-footer-div-up a{
   color: white;
@@ -119,21 +148,19 @@ hr{
 .mob-footer-div-down{
   margin-top: 25px;
 }
-.footer-div-up a{
-  color: white;
-  text-decoration: none;
+.mob-footer-copyright{
+  color: #cc9933;
+  font-size: 10px;
   font-family: 'Spartan', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.footer-div-down a{
-  color: white;
+.mob-footer-copyright a{
+  color: #cc9933;
   text-decoration: none;
-  font-family: 'Spartan', sans-serif;
 }
 h2{
   font-family: 'Spartan', sans-serif;
-}
-@media only screen and (max-width: 768px){
-  
 }
 @media only screen and (max-width: 380px){
   .mob-cat a{
@@ -141,6 +168,9 @@ h2{
   }
 }
 @media only screen and (max-width: 768px){
+  .nav-link{
+    font-size: 10px!important;
+  }
   .search-box{
     margin-top: 20px;
   }
@@ -155,7 +185,6 @@ h2{
   }
   .navbar-toggler{
      margin-top: -100px!important;
-     width: 10px;
      border:none;
      outline: none!important;
   }

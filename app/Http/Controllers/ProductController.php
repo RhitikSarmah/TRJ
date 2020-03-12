@@ -10,6 +10,9 @@ use Session;
 
 class ProductController extends Controller
 {
+    public function indexSearch(Request $request){
+        
+    }
     public function create(){
     	$categories = Category::select('name','id')->get();
     	$subcategories = Subcategory::select('name','category_id','id')->get();

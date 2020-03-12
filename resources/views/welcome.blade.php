@@ -176,7 +176,7 @@
        <h2>CONTACT US</h2><br>
        <a href="">info@tansukhrairatanlal.com</a>
        <br> <a href="">Old Post Office, GS Road, Guwahati- 781005 <br> 0361-2343701/02</a>
-       <br><br><a href="">Shopper s Point, 1st Floor, HB Road <br> Fancy Bazaar, Guwahati 781001 <br> 0361-2607069</a>
+       <br><br><a href="">Shopper's Point, 1st Floor, HB Road <br> Fancy Bazaar, Guwahati 781001 <br> 0361-2607069</a>
        <br><br>
        <a href="">icon</a>
        <a href="">icon</a>
@@ -190,6 +190,8 @@
        <a href="">Payment Options</a><br>
      </div>
   </div>
+       <span class="footer-copyright">&copy; Tansukhrai Ratanlal Jewellers: 2020</span>
+       <div class="footer-developer">Developed by: <a href="https://www.coloursandpatterns.in"> coloursandpatterns.in</a></div>
 </div>
 
 <!-- footer mobile -->
@@ -212,6 +214,10 @@
        <a href="">Track Order</a><br>
        <a href="">Payment Options</a><br>
      </div>
+  </div>
+  <div class="mob-footer-copyright text-center">
+    &copy; Tansukhrai Ratanlal Jewellers: 2020 <br>
+    Developed by: <a href="https://www.coloursandpatterns.in">coloursandpatterns.in</a>
   </div>
 </div>
 
