@@ -8,6 +8,7 @@ Route::post('/enquiry-form','EnquiryController@store')->name('store.enquiry.form
 Route::get('/feedback-form','FeedbackController@view')->name('view.feedback.form');
 Route::post('/feedback-form','FeedbackController@store')->name('store.feedback.form');
 Route::get('/our-product-categories/{id}','SubcategoryController@indexView')->name('index.view.subcategory');
+Route::get('/search','ProductController@indexSearch')->name('index.search');
 
 Route::group(['prefix'=>'dashboard'],function(){
 	Route::get('/',function(){

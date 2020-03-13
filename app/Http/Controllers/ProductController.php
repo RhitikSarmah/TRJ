@@ -11,7 +11,14 @@ use Session;
 class ProductController extends Controller
 {
     public function indexSearch(Request $request){
-        
+        $search = $request->search;
+         if($search != ""){
+          $searchProduct = Product::where('name', 'LIKE', '%' .$search. '%')->get();
+          if(count($searchProduct) > 0){
+            return view('dashboard.product.viewsearch')->with('searchProduct',$searchProduct);
+          }
+        }
+         return view('dashboard.error');
     }
     public function create(){
     	$categories = Category::select('name','id')->get();

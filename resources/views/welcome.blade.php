@@ -8,18 +8,19 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}}">
 </head>
 <body>
 
   <!--mobile navbar for products-->
-<div class="container mob-nav-logo p-4">
+<div class="container mob-nav-logo p-4 animated slideInDown">
   <div class="row justify-content-center">
         <img class="mob-nav-image" src="{{asset('images/logo.png')}}">
   </div>
 </div>
 
   <!-- navbar for products-->
-<div class="container nav-logo p-5">
+<div class="container nav-logo p-5 animated slideInDown">
   <div class="row justify-content-center">
         <img src="{{asset('images/logo.png')}}" width="60%">
   </div>
@@ -45,13 +46,13 @@
         <a class="nav-link" href="#">FEEDBACK</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ENQUIRY</a>
+        <a class="nav-link" href="#">CONTACT</a>
       </li>
     </ul>
     <form class="form-inline">
       <div class="search-box">
         <input class="search-text" type="search" name="search">
-        <a href="" class="search-btn">
+        <a href="{{asset(route('index.search'))}}" class="search-btn">
           <img src="{{asset('images/search.png')}}" width="25px">
         </a>
       </div>
@@ -62,7 +63,7 @@
 <hr>
 
 <!-- mobile categories -->
-<div class="mobile-category color-blue">
+<div class="mobile-category color-blue animated slideInUp">
   <div class="container-fluid justify-content-center">
     <div class="row justify-content-center text-center color-blue">
       <div class="col-2 mob-cat">
@@ -93,7 +94,7 @@
 </div>
 
 <!-- categories -->
-<div class="category color-blue">
+<div class="category color-blue animated slideInUp">
   <div class="container justify-content-center">
     <div class="row justify-content-center text-center color-blue">
       <div class="col-2 cat">

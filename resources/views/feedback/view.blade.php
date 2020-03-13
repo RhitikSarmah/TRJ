@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <div class="row" style="display: flex; justify-content: center;">
+<div class="row" style="display: flex; justify-content: center;">
   <div class="col-md-4">
      <form method="POST" action="{{asset(route('store.feedback.form'))}}">
       @csrf
@@ -20,7 +20,7 @@
               <small class="text-danger">{{$errors->first('email')}}</small>
             </div>
             <label>Query1</label>
-            <div class="form-group">
+            <div class="form-group" style="background-color: #ececec; justify-content: center; padding-left: 12px;">
                  <label class="radio-inline">
                     <input type="radio" name="query1" value="EXCELLENT" checked>Excellent
                   </label>
@@ -51,7 +51,7 @@
             </div>
             <label>Query1</label>
             <div class="form-group">
-                 <label class="radio-inline">
+                 <label class="radio-inline" style="color: blue">
                     <input type="radio" name="query3" value="EXCELLENT" checked>Excellent
                   </label>
                   <label class="radio-inline">
