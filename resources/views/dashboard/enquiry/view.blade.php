@@ -29,10 +29,10 @@
 	    <tr>
 	      <th scope="col">Serial No.</th>
 	      <th scope="col">Name</th>
-	      <th scope="col">Address</th>
-	      <th scope="col">Phone</th>
 	      <th scope="col">Email</th>
+	      <th scope="col">Phone</th>
 	      <th scope="col">Enquiry</th>
+	      <th scope="col">Interested?</th>
 	      <th scope="col">Time</th>
 	    </tr>
 	  </thead>
@@ -41,10 +41,10 @@
 	    <tr>
 	      <th scope="row">{{$loop->iteration}}</th>
 	      <td>{{$enquiries->name}}</td>
-	      <td>{{$enquiries->address}}</td>
-	      <td>{{$enquiries->phone}}</td>
 	      <td>{{$enquiries->email}}</td>
+	      <td>{{$enquiries->phone}}</td>
 	      <td>{{$enquiries->enquiry}}</td>
+	      <td>{{$enquiries->interest}}</td>
 	      <td>{{$enquiries->created_at->diffForHumans()}}</td>
 	      <td>
 	      	<form method="POST" action="{{route('enquiry.delete',$enquiries->id)}}">

@@ -1,3 +1,15 @@
+.font-cinzel-deco{
+	font-family: 'Cinzel Decorative', cursive;
+}
+.font-cinzel{
+	font-family: 'Cinzel', serif;
+}
+.font-spartan{
+	font-family: 'Spartan', sans-serif;
+}
+.order-padding-bottom{
+	padding-bottom: 20px;
+}
 .text-white{
 	color: white;
 }
@@ -16,6 +28,17 @@
 .bg-grey{
 	background-color: #ececec;
 }
+.text-order-form{
+	font-size: 20px;
+	font-family: 'Spartan', sans-serif;
+}
+.feedback-alert{
+	background-color: #242444;
+	color: #cc9933;
+}
+.feedback-top-margin{
+	margin-top: 15px;
+}
 .feedback-input{
 	width: 100%; 
 	background-color: #ececec; 
@@ -30,6 +53,10 @@
 .feedback-label{
 	margin-left: 20px; 
 	margin-bottom: 0px!important;
+	font-family: 'Spartan', sans-serif;
+}
+.input-error{
+	color: #cc9933;
 }
 .order-form-header{
 	padding-top: 30px; 
@@ -58,4 +85,29 @@
 	justify-content: center; 
 	padding-left: 12px; 
 	padding-top: 8px;
+}
+h1{
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+/*my-order-view*/
+table {
+	  border-collapse: collapse;
+	  border-spacing: 0;
+	  width: 100%;
+	  background-color: #ececec;
+	  font-size: 14px; 
+	  font-weight: 450; 
+	  color: #242444;
+	  font-family: 'Spartan', sans-serif;
+}
+th, td {
+	  text-align: left;
+	  padding: 16px;
+}
+tr:nth-child(even) {
+	  background-color: #fff;
+}
+.table-text{
+		text-align: right;
 }

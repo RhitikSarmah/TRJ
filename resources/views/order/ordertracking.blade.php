@@ -4,20 +4,20 @@
 <div class="color-blue order-form-header">
   <div class="container justify-content-center">
     <div class="row justify-content-center text-center">
-      <div class="col-md-5">
-           <h1 class="text-white">YOUR ORDER</h1>
-           <p class="text-yellow">Login to view your order details and track your order</p>
+      <div class="col-md-8">
+           <h1 class="text-white">Your Order</h1>
+           <p class="text-yellow font-spartan order-padding-bottom text-order-form">Login to view your order details and track your order</p>
            <form method="POST" action="{{route('check.my.order')}}">
             @csrf
             <div class="form-group">
-              <label class="text-yellow">Invoice Number</label>
+              <label class="text-yellow text-order-form">Invoice Number</label>
               <input class="order-form-input" type="text" class="form-control form-control-sm" name="invoice" style="">
             </div>
             <div class="text-yellow">
-              <label for="exampleInputEmail1">Phone Number</label>
+              <label class="text-order-form" style="margin-left: 7px;">Phone Number</label>
               <input class="order-form-input" type="text" class="form-control form-control-sm" name="phone">
             </div>
-            <div class="d-flex justify-content-center btn-margin"><button type="submit" class="btn btn-custom text-white">CHECK MY ORDER</button></div>
+            <div class="d-flex justify-content-center btn-margin"><button type="submit" class="btn btn-custom text-white order-padding-bottom">SUBMIT</button></div>
          </form>
       </div>
     </div>
@@ -26,30 +26,30 @@
 <div class="feedback-form-header">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="text-center">
-          <h1>FEEDBACK</h1>
-          <p>Share your experience with us</p>
+      <div class="col-md-8">
+        <div class="text-center feedback-top-margin">
+          <h1>Feedback</h1>
+          <p class="text-order-form order-padding-bottom text-yellow">Share your experience with us</p>
         </div>
          <form method="POST" action="{{asset(route('store.feedback.form'))}}">
             @csrf
             @if(Session::has('success'))
-            <div class="alert alert-success">{{Session::get('success')}}</div>
+            <div class="alert feedback-alert">{{Session::get('success')}}</div>
             @endif
                 <div class="form-group">
                   <label class="feedback-label">Name</label><br>
                   <input class="feedback-input" type="text" name="name">
-                  <small class="text-danger">{{$errors->first('name')}}</small>
+                  <small class="input-error">{{$errors->first('name')}}</small>
                 </div>
                 <div class="form-group">
                   <label class="feedback-label">Email id.</label><br>
-                  <input class="feedback-input" type="text" name="name">
-                  <small class="text-danger">{{$errors->first('name')}}</small>
+                  <input class="feedback-input" type="text" name="email">
+                  <small class="input-error">{{$errors->first('email')}}</small>
                 </div>
                 <div class="form-group">
                   <label class="feedback-label">Phone no.</label><br>
-                  <input class="feedback-input" type="text" name="name">
-                  <small class="text-danger">{{$errors->first('name')}}</small>
+                  <input class="feedback-input" type="text" name="phone">
+                  <small class="input-error">{{$errors->first('phone')}}</small>
                 </div>
                 <label class="feedback-label">Staff service and assistence</label>
                 <div class="form-group feedback-radio-div">
@@ -129,7 +129,7 @@
                 <label class="feedback-label">How you come to know about Tansukhrai Ratanlal Jewellers?</label>
                 <div class="form-group feedback-radio-div">
                      <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query6" value="HOARDINGS" checked>HOARDINGS
+                        <input class="feedback-input-radio" type="radio" name="query6" value="HOARDINGS">HOARDINGS
                       </label>
                       <label class="radio-inline text-yellow">
                         <input class="feedback-input-radio" type="radio" name="query6" value="SOCIAL_MEDIA">SOCIAL MEDIA
@@ -144,32 +144,32 @@
                 <label class="feedback-label">Did you find your requirement?</label>
                 <div class="form-group feedback-radio-div">
                      <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query7" value="EXCELLENT" checked>YES
+                        <input class="feedback-input-radio" type="radio" name="query7" value="YES" checked>YES
                       </label>
                       <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query7" value="GOOD">NO
+                        <input class="feedback-input-radio" type="radio" name="query7" value="NO">NO
                       </label>
                 </div>
                 <label class="feedback-label">Would you recommend us to Friends/Relatives?</label>
                 <div class="form-group feedback-radio-div">
                      <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query8" value="EXCELLENT" checked>YES
+                        <input class="feedback-input-radio" type="radio" name="query8" value="YES" checked>YES
                       </label>
                       <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query8" value="GOOD">NO
+                        <input class="feedback-input-radio" type="radio" name="query8" value="NO">NO
                       </label>
                 </div>
                 <div class="form-group">
                   <label class="feedback-label">Suggestion & Complains in order to improve our services</label><br>
-                  <textarea rows="3" style="width: 100%;"></textarea>
+                  <textarea name="feedback" class="feedback-input" rows="3" style="width: 100%;"></textarea>
                 </div>
-                <label class="feedback-label">Would you like to be contacted by representatives ocf Tansukhrai Ratanlal Jewellers?</label>
+                <label class="feedback-label">Would you like to be contacted by representatives of Tansukhrai Ratanlal Jewellers?</label>
                 <div class="form-group feedback-radio-div">
                      <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query8" value="EXCELLENT" checked>YES
+                        <input class="feedback-input-radio" type="radio" name="query9" value="YES" checked>YES
                       </label>
                       <label class="radio-inline text-yellow">
-                        <input class="feedback-input-radio" type="radio" name="query8" value="GOOD">NO
+                        <input class="feedback-input-radio" type="radio" name="query9" value="NO">NO
                       </label>
                 </div>
                 <div class="d-flex justify-content-center btn-margin"><button type="submit" class="btn btn-custom text-yellow">SUBMIT</button></div>

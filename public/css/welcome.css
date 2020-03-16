@@ -9,6 +9,14 @@
   background: #cc9933; 
   border-radius: 10px;
 }
+.loading{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: #1c273a url('https://i.pinimg.com/originals/a2/dc/96/a2dc9668f2cf170fe3efeb263128b0e7.gif')
+  no-repeat center;
+  z-index: 1;
+}
 .color-blue{
   background-color: #242444;
 }

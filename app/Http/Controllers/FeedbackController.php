@@ -16,8 +16,7 @@ class FeedbackController extends Controller
           'name' => 'required',
           'phone' => 'required',
           'email' => 'required',
-          'purchase' => 'required',
-          'complaint' => 'required'
+          'feedback' => 'required'
         ]);
         $create = Feedback::create([
            'name' => $request->name,
@@ -32,13 +31,7 @@ class FeedbackController extends Controller
            'query7' => $request->query7,
            'query8' => $request->query8,
            'query9' => $request->query9,
-           'query10' => $request->query10,
-           'query11' => $request->query11,
-           'query12' => $request->query12,
-           'purchase' => $request->purchase,
-           'ref' => $request->ref,
-           'reason' => $request->reason,
-           'complaint' => $request->complaint
+           'feedback' => $request->feedback
         ]);
         if($create){
             Session::flash('success','THANK YOU FOR YOUR VALUABLE FEEDBACK!');

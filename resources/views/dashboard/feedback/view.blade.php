@@ -25,10 +25,7 @@
 	      <th scope="col">Phone</th>
 	      <th scope="col">Email</th>
 	      <th scope="col">Feedbacks</th>
-	      <th scope="col">Purchase</th>
-	      <th scope="col">References</th>
-	      <th scope="col">Reason to buy from us</th>
-	      <th scope="col">Complaint</th>
+	      <th scope="col">Feedback</th>
 	    </tr>
 	  </thead>
 	  @foreach($feedback as $feedbacks)
@@ -42,24 +39,18 @@
 			  <button type="button" class="btn btn-danger">Feedbacks</button>
 			  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			  </button>
-			  <div class="dropdown-menu">
-			    <a class="dropdown-item">Query1: {{$feedbacks->query1}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query2}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query3}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query4}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query5}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query6}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query7}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query8}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query9}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query10}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query11}}</a>
-			    <a class="dropdown-item">Query1: {{$feedbacks->query12}}</a>
+			  <div class="dropdown-menu" style="margin-right: 100px;">
+			    <a class="dropdown-item">Staff service and assistence: {{$feedbacks->query1}}</a>
+			    <a class="dropdown-item">Collection of products: {{$feedbacks->query2}}</a>
+			    <a class="dropdown-item">Display and presentation of products: {{$feedbacks->query3}}</a>
+			    <a class="dropdown-item">Overall experience: {{$feedbacks->query4}}</a>
+			    <a class="dropdown-item">Delivery and payment: {{$feedbacks->query5}}</a>
+			    <a class="dropdown-item">How you come to know about Tansukhrai Ratanlal Jewellers?: {{$feedbacks->query6}}</a>
+			    <a class="dropdown-item">Did you find your requirement?: {{$feedbacks->query7}}</a>
+			    <a class="dropdown-item">Would you recommend us to Friends / Relatives?: {{$feedbacks->query8}}</a>
+			    <a class="dropdown-item">Do you agree to be contacted by representatives of Tansukhrai Ratanlal Jewellers?: {{$feedbacks->query9}}</a>
 		  </div></td>
-	      <td><a>{{$feedbacks->purchase}}</a></td>
-	      <td><a>{{$feedbacks->ref}}</a></td>
-	      <td><a>{{$feedbacks->reason}}</a></td>
-	      <td><a>{{$feedbacks->complaint}}</a></td>
+	      <td><a>{{$feedbacks->feedback}}</a></td>
 	    </tr>
 	  </tbody>
 	  @endforeach
