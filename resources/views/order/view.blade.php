@@ -51,20 +51,29 @@
 	</div>
 </div>
 
-<div>
-	@if($orders->status == "ORDERED")
-	     <div style="font-size: 30px; font-weight: 600;"><span style="color: green; font-size: 30px; font-weight: 600;">ordered></span>in making>dispatched>shipment>arrived>delivered</div>
-	@elseif($orders->status == "MAKING")
-	     <div style="font-size: 30px; font-weight: 600;"><span style="color: green; font-size: 30px; font-weight: 600;">ordered>in making></span>dispatched>shipment>arrived>delivered</div>
-	@elseif($orders->status == "DISPATCHED")
-	     <div style="font-size: 30px; font-weight: 600;"><span style="color: green; font-size: 30px; font-weight: 600;">ordered>in making>dispatched></span>shipment>arrived>delivered</div>
-	@elseif($orders->status == "SHIPMENT")
-	     <div style="font-size: 30px; font-weight: 600;"><span style="color: green; font-size: 30px; font-weight: 600;">ordered>in making>dispatched>shipment></span>arrived>delivered</div>
-	@elseif($orders->status == "ARRIVED")
-	     <div style="font-size: 30px; font-weight: 600;"><span style="color: green; font-size: 30px; font-weight: 600;">ordered>in making>dispatched>shipment>arrived></span>delivered</div>
-	@elseif($orders->status == "DELIVERED")
-	     <div style="color:green; font-size: 30px; font-weight: 600;">ordered>in making>dispatched>shipment>arrived>delivered</div>
-    @endif
+<div class="container" style="margin-top: 20px; margin-bottom: 40px;">
+	<div class="row justify-content-center">
+		<div class="col-md-8">
+			  <div class="text-center order-form-header">
+		          <h1>Tracking Details</h1>
+		          <p class="text-order-form text-yellow">Expected Time of Delivery: {{$orders->deliverydate}}</p>
+			   </div>
+					@if($orders->status == "ORDERED")
+					     <img src="{{asset('images/track1.png')}}" width="100%">
+					@elseif($orders->status == "MAKING")
+					     <img src="{{asset('images/track2.png')}}" width="100%">
+					@elseif($orders->status == "DISPATCHED")
+					     <img src="{{asset('images/track3.png')}}" width="100%">
+					@elseif($orders->status == "SHIPMENT")
+					     <img src="{{asset('images/track4.png')}}" width="100%">
+					@elseif($orders->status == "ARRIVED")
+					     <img src="{{asset('images/track5.png')}}" width="100%">
+					@elseif($orders->status == "DELIVERED")
+					     <img src="{{asset('images/track6.png')}}" width="100%">
+				    @endif
+		</div>
+	</div>
 </div>
+
 @endforeach
 @endsection

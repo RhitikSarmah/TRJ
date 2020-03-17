@@ -10,6 +10,21 @@ Route::post('/feedback-form','FeedbackController@store')->name('store.feedback.f
 Route::get('/our-product-categories/{id}','SubcategoryController@indexView')->name('index.view.subcategory');
 Route::get('/search','ProductController@indexSearch')->name('index.search');
 
+Route::group(['prefix' => 'policies'],function(){
+    Route::get('/disclaimer',function(){
+        return view('footer.disclaimer');
+    })->name('policy.disclaimer');
+    Route::get('/jewelry-care',function(){
+        return view('footer.jewelery-care');
+    })->name('policy.jewelry-care');
+    Route::get('/payment-options',function(){
+        return view('footer.payment-options');
+    })->name('policy.payment-options');
+    Route::get('/terms_and_conditions',function(){
+        return view('footer.terms-conditions');
+    })->name('policy.terms-conditions');
+});
+
 Route::group(['prefix'=>'dashboard'],function(){
 	Route::get('/',function(){
          return view('dashboard.dashboardlayout');

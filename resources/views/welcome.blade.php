@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T N J</title>
+    <link rel="icon" href="{{asset('images/favicon.png')}}" type="image/gif">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -36,19 +37,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto" >
       <li class="nav-item">
-        <a class="nav-link" href="#">HOME</a>
+        <a class="nav-link" href="{{asset(route(''))}}">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">COLLECTIONS</a>
+        <a class="nav-link" href="">COLLECTIONS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ORDER</a>
+        <a class="nav-link" href="{{asset(route(''))}}">ORDER</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">FEEDBACK</a>
+        <a class="nav-link" href="{{asset(route(''))}}">FEEDBACK</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">CONTACT</a>
+        <a class="nav-link" href="">CONTACT</a>
       </li>
     </ul>
     <form class="form-inline">
@@ -159,7 +160,9 @@
     consequat.
   </div>
   <div class="col-md-6">
-    <img src="{{asset('images/about.png')}}" width="100%">
+    <div class="row justify-content-center">
+      <img src="{{asset('images/about.png')}}" height="460px">
+    </div>
   </div>
 </div>
 </div>
@@ -186,11 +189,11 @@
        <a href="">icon</a><br><br>
      </div>
      <div class="d-inline-block footer-div-down" style="float: right;"> <br><br><br>
-       <a href="">Disclaimer</a><br>
-       <a href="">Jewellery Care</a><br>
-       <a href="">Terms & Conditions</a><br>
+       <a href="{{asset(route('policy.disclaimer'))}}">Disclaimer</a><br>
+       <a href="{{asset(route('policy.jewelry-care'))}}">Jewellery Care</a><br>
+       <a href="{{asset(route('policy.terms-conditions'))}}">Terms & Conditions</a><br>
        <a href="">Track Order</a><br>
-       <a href="">Payment Options</a><br>
+       <a href="{{asset(route('policy.payment-options'))}}">Payment Options</a><br>
      </div>
   </div>
        <span class="footer-copyright">&copy; Tansukhrai Ratanlal Jewellers: 2020</span>
@@ -211,11 +214,11 @@
        <a href="">icon</a>
      </div>
      <div class="justify-content-center mob-footer-div-down">
-       <a href="">Disclaimer</a><br>
-       <a href="">Jewellery Care</a><br>
-       <a href="">Terms & Conditions</a><br>
+       <a href="{{asset(route('policy.disclaimer'))}}">Disclaimer</a><br>
+       <a href="{{asset(route('policy.jewelry-care'))}}">Jewellery Care</a><br>
+       <a href="{{asset(route('policy.terms-conditions'))}}">Terms & Conditions</a><br>
        <a href="">Track Order</a><br>
-       <a href="">Payment Options</a><br>
+       <a href="{{asset(route('policy.payment-options'))}}">Payment Options</a><br>
      </div>
   </div>
   <div class="mob-footer-copyright text-center">

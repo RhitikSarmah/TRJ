@@ -23,7 +23,7 @@
    </div>
 </div>
 <div class="row">
- <div class="container">
+ <div class="container-fluid">
 	<table class="table">
 	  <thead>
 	    <tr>
@@ -37,6 +37,7 @@
 	      <th scope="col">Price</th>
 	      <th scope="col">Invoice</th>
 	      <th scope="col">Time</th>
+	      <th scope="col">Expected</th>
 	      <th scope="col">Status</th>
 	      <th scope="col">Update</th>
 	    </tr>
@@ -54,6 +55,7 @@
 	      <td><a>{{$orders->price}}</a></td>
 	      <td><a>{{$orders->invoice}}</a></td>
 	      <td><a>{{$orders->created_at}}</a></td>
+	      <td><a>{{$orders->deliverydate}}</a></td>
 	      <td><a>{{$orders->status}}</a></td>
 	      <td>
 	      	  <div class="form-group">

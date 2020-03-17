@@ -63,6 +63,11 @@
         <input type="text" class="form-control" placeholder="Price In Rs" name="price">
         <small>{{$errors->first('price')}}</small>
       </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Expected date of delivery</label>
+        <input type="date" class="form-control" placeholder="The date of expected delivery" name="deliverydate">
+        <small>{{$errors->first('deliverydate')}}</small>
+      </div>
       <button type="submit" class="btn btn-danger margin">Create Order</button>
     </form>
   </div>

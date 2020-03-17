@@ -21,7 +21,8 @@ class OrderController extends Controller
         'details' => 'required|max:255',
         'invoice' => 'required|max:20',
         'quantity' => 'required|max:50',
-        'price' => 'required|max:20'
+        'price' => 'required|max:20',
+        'deliverydate' => 'required'
     	]);
         $order = new Order;
         $order->name = $request->name;
@@ -33,6 +34,7 @@ class OrderController extends Controller
         $order->invoice = $request->invoice;
         $order->quantity = $request->quantity;
         $order->price = $request->price;
+        $order->deliverydate = $request->deliverydate;
         $create = $order->save();
         if($create){
         	Session::flash('success','New Order Created');

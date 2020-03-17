@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T N J</title>
+    <link rel="icon" href="{{asset('images/favicon.png')}}" type="image/gif">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -77,11 +78,11 @@
        <a href="">icon</a><br><br>
      </div>
      <div class="d-inline-block footer-div-down" style="float: right;"> <br><br><br>
-       <a href="">Disclaimer</a><br>
-       <a href="">Jewellery Care</a><br>
-       <a href="">Terms & Conditions</a><br>
+       <a href="{{asset(route('policy.disclaimer'))}}">Disclaimer</a><br>
+       <a href="{{asset(route('policy.jewelry-care'))}}">Jewellery Care</a><br>
+       <a href="{{asset(route('policy.terms-conditions'))}}">Terms & Conditions</a><br>
        <a href="">Track Order</a><br>
-       <a href="">Payment Options</a><br>
+       <a href="{{asset(route('policy.payment-options'))}}">Payment Options</a><br>
      </div>
   </div>
        <span class="footer-copyright">&copy; Tansukhrai Ratanlal Jewellers: 2020</span>
@@ -102,11 +103,11 @@
        <a href="">icon</a>
      </div>
      <div class="justify-content-center mob-footer-div-down">
-       <a href="">Disclaimer</a><br>
-       <a href="">Jewellery Care</a><br>
-       <a href="">Terms & Conditions</a><br>
+       <a href="{{asset(route('policy.disclaimer'))}}">Disclaimer</a><br>
+       <a href="{{asset(route('policy.jewelry-care'))}}">Jewellery Care</a><br>
+       <a href="{{asset(route('policy.terms-conditions'))}}">Terms & Conditions</a><br>
        <a href="">Track Order</a><br>
-       <a href="">Payment Options</a><br>
+       <a href="{{asset(route('policy.payment-options'))}}">Payment Options</a><br>
      </div>
   </div>
   <div class="mob-footer-copyright text-center">
